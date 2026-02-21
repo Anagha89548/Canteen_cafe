@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Delight Canteen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar">
+  <div class="nav-container">
+    <h2 class="logo">🍽️ Campus Delight</h2>
+    <div class="nav-links">
+      <button onclick="showHome()" class="nav-btn active" id="home-btn">Home</button>
+      <button onclick="showMenu()" class="nav-btn" id="menu-btn">Menu</button>
+      <button onclick="showQueue()" class="nav-btn" id="queue-btn">Queue</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HOME SECTION ===== -->
+<section id="home">
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1577159552443-62a01f80a00e?w=1200&h=400&fit=crop" alt="Hero Banner" class="hero-img">
+    <div class="hero-overlay">
+      <h1>Campus Delight Canteen</h1>
+      <p>Fresh • Hygienic • Affordable</p>
+      <button onclick="showMenu()" class="btn btn-primary">Explore Our Menu</button>
+    </div>
+  </div>
+  
+  <!-- Featured Section -->
+  <div class="featured-section">
+    <h2 class="section-title">🌟 Popular Items</h2>
+    <div class="featured-cards">
+      <div class="featured-card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop" alt="Burger">
+        <h3>Fresh Burgers</h3>
+        <p>Delicious & Juicy</p>
+      </div>
+      <div class="featured-card">
+        <img src="https://en.wikipedia.org/wiki/File:Rameshwaram_Cafe_Dosa.jpg" alt="Dosa">
+        <h3>Crispy Dosa</h3>
+        <p>South Indian Special</p>
+      </div>
+      <div class="featured-card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=200&h=200&fit=crop" alt="Coffee">
+        <h3>Hot Coffee</h3>
+        <p>Aromatic & Fresh</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU SECTION ===== -->
+<section id="menu" class="hidden">
+  <h2 class="section-title">🍽️ Choose Your Items</h2>
+  <p class="section-subtitle">Select from our delicious menu</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=260&h=200&fit=crop" alt="Burger">
+        <span class="badge">Popular</span>
+      </div>
+      <div class="card-content">
+        <h3>Burger</h3>
+        <p class="description">Tasty & Fresh</p>
+        <p class="price">₹80</p>
+        <div class="qty-wrapper">
+          <label>Qty:</label>
+          <input type="number" id="burgerQty" value="1" min="1">
+        </div>
+        <button onclick="selectItem('Burger',80,'burgerQty')" class="card-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image-wrapper">
+        <img src="https://en.wikipedia.org/wiki/File:Rameshwaram_Cafe_Dosa.jpg" alt="Dosa">
+        <span class="badge new">New</span>
+      </div>
+      <div class="card-content">
+        <h3>Dosa</h3>
+        <p class="description">Crispy & Delicious</p>
+        <p class="price">₹50</p>
+        <div class="qty-wrapper">
+          <label>Qty:</label>
+          <input type="number" id="dosaQty" value="1" min="1">
+        </div>
+        <button onclick="selectItem('Dosa',50,'dosaQty')" class="card-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=260&h=200&fit=crop" alt="Coffee">
+      </div>
+      <div class="card-content">
+        <h3>Coffee</h3>
+        <p class="description">Hot & Aromatic</p>
+        <p class="price">₹30</p>
+        <div class="qty-wrapper">
+          <label>Qty:</label>
+          <input type="number" id="coffeeQty" value="1" min="1">
+        </div>
+        <button onclick="selectItem('Coffee',30,'coffeeQty')" class="card-btn">Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== PROCEED SECTION ===== -->
+<section id="proceed" class="hidden">
+  <h2 class="section-title">✅ Confirm Order</h2>
+
+  <div class="form-container">
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <div id="orderDetails" class="order-items"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter Your Name">
+    </div>
+
+    <div class="form-group">
+      <label for="payment">Payment Method</label>
+      <select id="payment">
+        <option value="Cash">💵 Cash</option>
+        <option value="Online">💳 Online Payment</option>
+      </select>
+    </div>
+
+    <button onclick="placeOrder()" class="btn btn-success">Place Order</button>
+
+    <p id="result" class="result-message"></p>
+  </div>
+</section>
+
+<!-- ===== QUEUE SECTION ===== -->
+<section id="queueSection" class="hidden">
+  <div class="queue-header">
+    <h2 class="section-title">📋 Live Queue Status</h2>
+    <p class="section-subtitle">Real-time order status</p>
+  </div>
+  <div id="queue" class="queue-container"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
