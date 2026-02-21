@@ -220,6 +220,19 @@ Contributions are welcome! Feel free to:
 For issues, questions, or suggestions, please open an issue on GitHub.
 
 ---
+## screenshot
+<img width="1336" height="828" alt="image" src="https://github.com/user-attachments/assets/28b20263-4b8e-49ef-9aa5-fada900a3c6a" />
+<img width="1325" height="830" alt="Screenshot 2026-02-21 093508" src="https://github.com/user-attachments/assets/76fa858f-a77f-4c24-9c03-7feccd0aee36" />
+<img width="1338" height="841" alt="Screenshot 2026-02-21 093532" src="https://github.com/user-attachments/assets/9e8cb6ed-bb74-41db-a925-27962dff3ad3" />
 
+---
+## teammembers
+Amritha Vinoj Kollara and Anagha C.Anto
+
+---
+## demovideo
+https://drive.google.com/file/d/11dhdiDmt7YahP3qcF71BxQl5z-oG8zIy/view?usp=sharing
+
+---
 **Made with ❤️ for Campus Delight Canteen**
 \
