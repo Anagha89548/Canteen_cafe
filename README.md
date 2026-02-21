@@ -222,3 +222,4 @@ For issues, questions, or suggestions, please open an issue on GitHub.
 ---
 
 **Made with ❤️ for Campus Delight Canteen**
+\
