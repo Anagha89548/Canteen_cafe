@@ -7,11 +7,6 @@ app.use(express.static("public"));
 let orders = [];
 let tokenNumber = 1;
 
-// Home route
-app.get("/", (req, res) => {
-    res.send("Canteen Queue Management System Running 🚀");
-});
-
 // Place order
 app.post("/order", (req, res) => {
     const { name, item } = req.body;
